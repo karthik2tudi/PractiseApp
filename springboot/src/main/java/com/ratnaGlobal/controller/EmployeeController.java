@@ -50,9 +50,9 @@ public class EmployeeController {
 		empService.delete(employeeId);
 	}
 
-                   @PutMapping("/updateemployee")
-	public Employee update(@RequestBody Employee employee) {
-		empService.saveOrUpdate(employee);
-		return employee;
+                   @DeleteMapping("deleteemployee/{employeeid}")
+	private void deleteBook(@PathVariable(value = "id") int employeeId) {
+		empService.delete(employeeId);
 	}
+                   
 }
