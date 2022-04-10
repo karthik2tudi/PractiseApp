@@ -49,4 +49,11 @@ public class EmployeeController {
 	private void deleteBook(@PathVariable(value = "id") int employeeId) {
 		empService.delete(employeeId);
 	}
+	
+	@PostMapping(value = "/addemployees")
+	private Employee CreateEmployees(@RequestBody Employee employee) {
+		empService.saveOrUpdate(employee);
+		return employee;
+
+	}
 }
