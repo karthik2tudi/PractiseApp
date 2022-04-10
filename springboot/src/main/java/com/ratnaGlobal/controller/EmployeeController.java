@@ -43,7 +43,6 @@ public class EmployeeController {
 	private Employee update(@RequestBody Employee employee) {
 		empService.saveOrUpdate(employee);
 		return employee;
-
 	}
 
 	@DeleteMapping("deleteemployee/{employeeid}")
@@ -51,8 +50,13 @@ public class EmployeeController {
 		empService.delete(employeeId);
 	}
 
+                   @DeleteMapping("deleteemployee/{employeeid}")
+	private void deleteBook2(@PathVariable(value = "id") int employeeId) {
+		empService.delete(employeeId);
+	}                  
+}
           @GetMapping("/getemployee")
-	private List<Employee> getAllEmployees() {
+	private List<Employee> getAllEmployee() {
 		return empService.listAll();
 	}
 }
