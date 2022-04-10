@@ -55,3 +55,8 @@ public class EmployeeController {
 		empService.delete(employeeId);
 	}                  
 }
+          @GetMapping("/getemployee")
+	private List<Employee> getAllEmployee() {
+		return empService.listAll();
+	}
+}
