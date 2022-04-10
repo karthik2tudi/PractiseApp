@@ -50,4 +50,9 @@ public class EmployeeController {
 	private void deleteBook(@PathVariable(value = "id") int employeeId) {
 		empService.delete(employeeId);
 	}
+
+          @GetMapping("/getemployee")
+	private List<Employee> getAllEmployees() {
+		return empService.listAll();
+	}
 }
