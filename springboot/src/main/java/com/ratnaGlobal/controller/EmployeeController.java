@@ -51,8 +51,7 @@ public class EmployeeController {
 	}
 
                    @DeleteMapping("deleteemployee/{employeeid}")
-	private void deleteBook(@PathVariable(value = "id") int employeeId) {
+	private void deleteBook2(@PathVariable(value = "id") int employeeId) {
 		empService.delete(employeeId);
-	}
-                   
+	}                  
 }
